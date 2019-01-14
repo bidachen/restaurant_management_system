@@ -22,13 +22,9 @@ const tableItems = (state = tableList, action) => {
     case DELETE_ITEM:
       var newState = [];
       for (let i = 0; i < 16; i++) {
-        if (i !== action.tableID) newState.push([...state[i]]);
-        else
-          newState.push([
-            ...state[i].slice(0, action.index),
-            ...state[i].slice(action.index + 1)
-          ]);
+        newState.push([...state[i]]);
       }
+      newState[action.tableID].splice(action.index, 1);
       return newState;
     case ACTIVE_TABLE:
       var newState = [...state];
