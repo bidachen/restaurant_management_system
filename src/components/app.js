@@ -1,27 +1,22 @@
 import React from "react";
-import { render } from "react-dom";
-import { Jumbotron, Button, Container, Row, Col } from "reactstrap";
+import { Row } from "reactstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
-import Header from "./header.js";
-import LeftSide from "./leftSide.js";
-import RightSide from "./rightSide.js";
-import Middle from "./middle.js";
 import HeaderContainer from "../containers/headerProps.js";
+import LeftContainer from "../containers/leftProps.js";
+import MiddleContainer from "../containers/middleProps.js";
+import RightContainer from "../containers/rightProps.js";
 
-/*const App = () => {
-  return (
-    <Container fluid>
-      <Header />
-      <Row>
-        <LeftSide />
-        <Middle />
-        <RightSide />
-      </Row>
-    </Container>
-  );
-};*/
 const App = () => {
-  return <HeaderContainer />;
+  return (
+    <div>
+      <HeaderContainer />
+      <Row>
+        <LeftContainer />
+        <MiddleContainer />
+        <RightContainer />
+      </Row>
+    </div>
+  );
 };
 export default App;
